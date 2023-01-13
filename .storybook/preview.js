@@ -1,7 +1,7 @@
 import * as NextImage from 'next/image';
 import '../styles/globals.css';
-import { muiTheme } from 'storybook-addon-material-ui'
-export const decorators = [muiTheme()]
+import { muiTheme } from 'storybook-addon-material-ui';
+export const decorators = [muiTheme()];
 
 const BREAKPOINTS_INT = {
   xs: 375,
