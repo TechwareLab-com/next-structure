@@ -1,7 +1,7 @@
 import { ISidebarLayout } from './SidebarLayout';
 
 const base: ISidebarLayout = {
-  children: '{{component}}'
+  children: '{{component}}',
 };
 
 export const mockSidebarLayoutProps = {
