@@ -18,5 +18,5 @@ export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 
 Base.args = {
-  ...mockPrimaryLayoutProps.base,
+  ...mockPrimaryLayoutProps.children,
 } as IPrimaryLayout;
