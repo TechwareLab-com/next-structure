@@ -1,8 +1,9 @@
 import { IPrimaryLayout } from './PrimaryLayout';
 
-const base: IPrimaryLayout = {
+const children: IPrimaryLayout = {
+  children: '{{component}}',
 };
 
 export const mockPrimaryLayoutProps = {
-  base,
+  children,
 };
