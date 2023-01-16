@@ -1,30 +1,28 @@
-import * as React from 'react';
-import { NextPage } from 'next';
-import { Box, Button, Container, Grid, Typography } from '@material-ui/core';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import CatCard from '../components/cards/cat/CatCard';
+import { mockCatCardProps } from '../components/cards/cat/CatCard.mocks';
+import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+import SidebarLayout from '../components/layouts/sidebar/SidebarLayout';
+import styles from '../styles/Home.module.css';
+import { NextPageWithLayout } from './page';
 
-const IndexPage: NextPage = () => {
+const Home: NextPageWithLayout = () => {
   return (
-    <Container maxWidth="lg">
-      <Box py={3}>
-        <Grid container>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h2">My SaaS App</Typography>
-            <Typography variant="subtitle1">This is the subtitle</Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Button
-              variant="contained"
-              color="primary"
-              endIcon={<MailOutlineIcon />}
-            >
-              Subscribe for updates
-            </Button>
-          </Grid>
-        </Grid>
-      </Box>
-    </Container>
+    <section className={styles.main}>
+      <h1 className={styles.title}>
+        Welcome to <a href="https://nextjs.org">Next.js!</a>
+      </h1>
+      <CatCard {...mockCatCardProps.base} />
+    </section>
   );
 };
 
-export default IndexPage;
+export default Home;
+
+Home.getLayout = (page) => {
+  return (
+    <PrimaryLayout>
+      <SidebarLayout />
+      {page}
+    </PrimaryLayout>
+  );
+};
