@@ -4,7 +4,9 @@ import { PropsWithChildren } from 'react';
 
 export interface IPrimaryLayout {}
 
-const PrimaryLayout: React.FC<PropsWithChildren<IPrimaryLayout>> = ({ children }) => {
+const PrimaryLayout: React.FC<PropsWithChildren<IPrimaryLayout>> = ({
+  children,
+}) => {
   return (
     <>
       <Head>
